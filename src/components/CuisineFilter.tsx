@@ -51,6 +51,7 @@ const CuisineFilter = ({
               <div className="flex">
                 <input
                   id={`cuisine_${cuisine}`}
+                  placeholder="..."
                   type="checkbox"
                   className="hidden"
                   value={cuisine}

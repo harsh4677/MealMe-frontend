@@ -39,7 +39,9 @@ const UserProfileForm = ({
   isLoading,
   currentUser,
   title = "User Profile",
-  buttonText = "Submit",
+  
+  
+   buttonText = "Submit",
 }: Props) => {
   const form = useForm<UserFormData>({
     resolver: zodResolver(formSchema),
@@ -62,6 +64,7 @@ const UserProfileForm = ({
             View and change your profile information here
           </FormDescription>
         </div>
+
         <FormField
           control={form.control}
           name="email"
@@ -130,6 +133,7 @@ const UserProfileForm = ({
             )}
           />
         </div>
+        
         {isLoading ? (
           <LoadingButton />
         ) : (

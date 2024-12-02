@@ -19,6 +19,7 @@ const MobileNav = () => {
       <SheetTrigger>
         <Menu className="text-orange-500" />
       </SheetTrigger>
+
       <SheetContent className="space-y-3">
         <SheetTitle>
           {isAuthenticated ? (
@@ -30,7 +31,9 @@ const MobileNav = () => {
             <span> Welcome to MealMe!</span>
           )}
         </SheetTitle>
+
         <Separator />
+
         <SheetDescription className="flex flex-col gap-4">
           {isAuthenticated ? (
             <MobileNavLinks />
@@ -43,7 +46,9 @@ const MobileNav = () => {
             </Button>
           )}
         </SheetDescription>
+        
       </SheetContent>
+
     </Sheet>
   );
 };

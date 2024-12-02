@@ -52,6 +52,7 @@ const CheckoutButton = ({ onCheckout, disabled, isLoading }: Props) => {
           Go to checkout
         </Button>
       </DialogTrigger>
+
       <DialogContent className="max-w-[425px] md:min-w-[700px] bg-gray-50">
         <UserProfileForm
           currentUser={currentUser}
@@ -61,6 +62,7 @@ const CheckoutButton = ({ onCheckout, disabled, isLoading }: Props) => {
           buttonText="Continue to payment"
         />
       </DialogContent>
+      
     </Dialog>
   );
 };
