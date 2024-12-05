@@ -8,17 +8,14 @@ type Props = {
 
 const OrderStatusHeader = ({ order }: Props) => {
   const getExpectedDelivery = () => {
+    if (!order.restaurant) {
+      return "No delivery Time was mention"; // or handle it gracefully
+    }
     const created = new Date(order.createdAt);
-
-    created.setMinutes(
-      created.getMinutes() + order.restaurant.estimatedDeliveryTime
-    );
-
+    created.setMinutes(created.getMinutes() + order.restaurant.estimatedDeliveryTime);
     const hours = created.getHours();
     const minutes = created.getMinutes();
-
     const paddedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-
     return `${hours}:${paddedMinutes}`;
   };
 

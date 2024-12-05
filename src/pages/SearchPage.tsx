@@ -8,6 +8,7 @@ import SortOptionDropdown from "@/components/SortOptionDropdown";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
+// Define the SearchState type outside the component
 export type SearchState = {
   searchQuery: string;
   page: number;
@@ -28,6 +29,7 @@ const SearchPage = () => {
 
   const { results, isLoading } = useSearchRestaurants(searchState, city);
 
+  // Ensure that 'setSearchState' uses the correct type
   const setSortOption = (sortOption: string) => {
     setSearchState((prevState) => ({
       ...prevState,
@@ -68,10 +70,11 @@ const SearchPage = () => {
   };
 
   if (isLoading) {
-    <span>Loading ...</span>;
+    return <span>Loading ...</span>;
   }
 
   if (!results?.data || !city) {
+    console.log('Search results:', results); // Debugging line
     return <span>No results found</span>;
   }
 
@@ -103,7 +106,7 @@ const SearchPage = () => {
         </div>
 
         {results.data.map((restaurant) => (
-          <SearchResultCard restaurant={restaurant} />
+          <SearchResultCard key={restaurant.id} restaurant={restaurant} />
         ))}
         <PaginationSelector
           page={results.pagination.page}

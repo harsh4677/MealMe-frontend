@@ -14,6 +14,9 @@ export type MenuItem = {
 };
 
 export type Restaurant = {
+  name: string;
+  // id: Key | null | undefined;
+   id: null | undefined;
   _id: string;
   user: string;
   restaurantName: string;
@@ -35,6 +38,8 @@ export type OrderStatus =
   | "delivered";
 
 export type Order = {
+  // id: Key | null | undefined;
+  id: null | undefined;
   _id: string;
   restaurant: Restaurant;
   user: User;

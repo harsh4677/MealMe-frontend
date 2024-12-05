@@ -75,32 +75,32 @@ const UsernameMenu=()=>{
         {user?.email}      
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-[1025px] h-[500px] ">
+      <DialogContent className="sm:max-w-[1025px] h-[500px] text-center ">
 
           <DialogTitle>
-           <span className="text-orange-500 font-bold text-23xl">MealMe!</span>
+           <span className="text-orange-500 font-bold text-6xl">MealMe!</span>
           </DialogTitle>
             <DialogDescription>
                 <Link
                     to="/manage-restaurant"
-                    className="font-bold text-lg text-black hover:text-orange-500"
+                    className="font-bold text-5xl text-center text-black hover:text-orange-500"
                 >
-                    Manage Restaurant
+                    Manage Restaurant 👨🏻‍🍳
                 </Link>
             </DialogDescription>
             <Separator />
             <DialogDescription>
-                <Link to="/user-profile" className="font-bold text-lg text-black hover:text-orange-500">
-                    User Profile
+                <Link to="/user-profile" className="font-bold text-5xl text-black hover:text-orange-500">
+                    User Profile 👤
                 </Link>
             </DialogDescription>
             <Separator />
-            <DialogDescription>
+            <DialogDescription className="flex justify-center items-center h-full">
                 <Button
                     onClick={() => logout()}
-                    className="flex flex-1 font-bold text-xl bg-orange-500"
+                    className="flex flex-1 font-bold text-4xl bg-orange-500 hover:bg-red-600 w-[300px] h-[70px] rounded-2xl"
                     >
-                    Log Out
+                    Log Out 
                 </Button>
             </DialogDescription>
         </DialogContent>
