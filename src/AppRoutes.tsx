@@ -15,7 +15,7 @@ const AppRoutes = () => {
       <Route
         path="/"
         element={
-          <Layout showHero showLanding>
+          <Layout showHero>
             <HomePage />
           </Layout>
         }
@@ -24,7 +24,7 @@ const AppRoutes = () => {
       <Route
         path="/search/:city"
         element={
-          <Layout showHero={false} showLanding={false}>
+          <Layout showHero={false}>
             <SearchPage />
           </Layout>
         }
@@ -32,7 +32,7 @@ const AppRoutes = () => {
       <Route
         path="/detail/:restaurantId"
         element={
-          <Layout showHero={false} showLanding={false}>
+          <Layout showHero={false}>
             <DetailPage />
           </Layout>
         }
